@@ -21,6 +21,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'compass-rails'
+
 # html5 boilerplate generator
 gem 'html5-rails'
 
@@ -54,3 +56,5 @@ group :development, :test do
 
   gem 'pry-rails'
 end
+
+gem 'compass-h5bp', group: :assets
