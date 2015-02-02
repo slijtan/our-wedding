@@ -53,12 +53,14 @@
 	    margin-left: 711px;
 
 	    .text {
+		position: relative;
 		width: 500px;
 		height: 100%;
 		margin-left: auto;
 		margin-right: auto;
 		background-color: green;
 		padding: 20px;
+		z-index: 100;
 	    }
 	}
 
@@ -75,6 +77,14 @@
 	    position: absolute;
 	    top: 100%;
 	    left: 1000px;
+	    z-index: 99;
+	}
+
+	#sun {
+	    position: absolute;
+	    right: 15%;
+	    top: 100%;
+	    z-index: 101;
 	}
     }
 }

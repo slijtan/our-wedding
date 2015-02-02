@@ -6,7 +6,7 @@ function resizeComponents() {
     documentHeight = $(document).height();
     windowHeight = $window.height();
 
-    var pageHeightPercentage = 1.5;
+    var pageHeightPercentage = 1.7;
     var textDistanceFromTop = 0.45;
 
     var pageHeight =  pageHeightPercentage * windowHeight;
@@ -25,7 +25,12 @@ function scrollToBottom() {
 
 function initializeSprites() {
     var timeline = new TimelineMax({ paused: true });
-    timeline.to("#bird", 100, { top: "0%" });
+    timeline.add("start", 0);
+    timeline.add("bird-start", 0);
+    timeline.add("sun-start", 40);
+
+    timeline.to("#bird", 100, { top: "-31px" }, 'bird-start');
+    timeline.to("#sun", 30, { top: "-150px" }, "sun-start");
 
     $window.on("scroll", function() {
 	var scrollTop = $window.scrollTop();
