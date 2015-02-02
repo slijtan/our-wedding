@@ -25,7 +25,7 @@ function scrollToBottom() {
 
 function initializeSprites() {
     var timeline = new TimelineMax({ paused: true });
-    initializeVerticalSprite(timeline, "#bird", 100, 0)
+    timeline.to("#bird", 100, { top: "0%" });
 
     $window.on("scroll", function() {
 	var scrollTop = $window.scrollTop();
@@ -41,15 +41,6 @@ function initializeSprites() {
 
 	timeline.progress(scrollPercent).pause();
     });
-}
-
-function initializeVerticalSprite(timeline, selector, startPercentage, endPercentage) {
-    topMax = documentHeight - $(selector).height();
-    topStart = topMax * startPercentage / 100;
-    topEnd = topMax * endPercentage / 100;
-
-    $(selector).css({ top: startPercentage + "%" });
-    timeline.to(selector, 100, { top: endPercentage + "%" });
 }
 
 $(document).ready(function() {
