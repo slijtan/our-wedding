@@ -70,12 +70,12 @@ function initializeSprites2() {
     timeline.add("bg-dark-blue", 600);
     timeline.add("bg-black", 700);
 
-    timeline.add("foreground-out", 600);
+    timeline.add("foreground-out", 700);
 
     timeline.add("sun-in", 0);
     timeline.add("sun-out", 300);
 
-    timeline.add("moon-in", 500);
+    timeline.add("moon-in", 400);
     timeline.add("moon-up", 700);
 
     // Tweens
@@ -89,10 +89,10 @@ function initializeSprites2() {
 
     timeline.to("#foreground", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
 
-    timeline.to("#sun", 400, { top: "30%", ease: Power3.easeNone }, 'sun-in');
-    timeline.to("#sun", 400, { top: "120%", ease: Power3.easeIn }, 'sun-out');
+    timeline.to("#sun", 300, { top: "30%", ease: Power3.easeNone }, 'sun-in');
+    timeline.to("#sun", 300, { top: "120%", ease: Power3.easeIn }, 'sun-out');
 
-    timeline.to("#moon", 400, { top: "40%", ease: Power3.easeNone }, 'moon-in');
+    timeline.to("#moon", 300, { top: "40%", ease: Power3.easeNone }, 'moon-in');
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
 
