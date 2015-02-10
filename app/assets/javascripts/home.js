@@ -64,40 +64,36 @@ function initializeSprites2() {
     var timeline = new TimelineMax({ paused: true });
     timeline.add("start", 0);
 
-    timeline.add("background-yellow", 0);
-    timeline.add("background-light-blue", 200);
-    timeline.add("background-blue", 350);
-    timeline.add("background-dark-blue", 400);
-    timeline.add("background-black", 650);
+    timeline.add("bg-yellow", 0);
+    timeline.add("bg-light-blue", 100);
+    timeline.add("bg-blue", 400);
+    timeline.add("bg-dark-blue", 600);
+    timeline.add("bg-black", 700);
 
     timeline.add("foreground-out", 600);
 
     timeline.add("sun-in", 0);
-    timeline.add("sun-up", 100);
     timeline.add("sun-out", 300);
 
-    timeline.add("moon-in", 300);
-    timeline.add("moon-up", 600);
+    timeline.add("moon-in", 500);
+    timeline.add("moon-up", 700);
 
     // Tweens
     timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
 
-    timeline.to("#background", 50, { backgroundColor: 'rgb(219,207,32)' }, 'bg-yellow');
-    timeline.to("#background", 50, { backgroundColor: 'rgb(0,215,255)' }, 'bg-light-blue');
-    timeline.to("#background", 50, { backgroundColor: 'rgb(2,50,221)' }, 'bg-blue');
-    timeline.to("#background", 50, { backgroundColor: 'rgb(49,47,102)' }, 'bg-dark-blue');
-    timeline.to("#background", 300, { backgroundColor: 'rgb(0,0,0)' }, 'bg-black');
-    // timeline.to("#background", 10, { backgroundColor: 'rgb' }, 'bg-');
+    timeline.to("#background", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
+    timeline.to("#background", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
+    timeline.to("#background", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
+    timeline.to("#background", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
+    timeline.to("#background", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
 
+    timeline.to("#foreground", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
 
-    timeline.to("#foreground", 200, { bottom: -400 }, 'foreground-out');
+    timeline.to("#sun", 400, { top: "30%", ease: Power3.easeNone }, 'sun-in');
+    timeline.to("#sun", 400, { top: "120%", ease: Power3.easeIn }, 'sun-out');
 
-    timeline.to("#sun", 200, { top: "30%" }, 'sun-in');
-    timeline.to("#sun", 50, { top: "10%" }, 'sun-up');
-    timeline.to("#sun", 200, { top: "120%" }, 'sun-out');
-
-    timeline.to("#moon", 200, { top: "40%" }, 'moon-in');
-    timeline.to("#moon", 300, { top: "10%" }, 'moon-up');
+    timeline.to("#moon", 400, { top: "40%", ease: Power3.easeNone }, 'moon-in');
+    timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
 
     $window.on("scroll", function() {
@@ -112,7 +108,7 @@ function initializeSprites2() {
 	// console.log("Scroll Top: " + scrollTop);
 	// console.log("Bird position: " + $("#bird").css('top'));
 
-	$('#scroll-percent').text(scrollPercent * 100);
+	$('#scroll-percent').text(scrollPercent * 1000);
 	timeline.progress(scrollPercent).pause();
     });
 }
