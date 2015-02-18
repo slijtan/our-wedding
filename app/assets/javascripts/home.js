@@ -70,13 +70,13 @@ function initializeSprites2() {
     timeline.add("bg-dark-blue", 600);
     timeline.add("bg-black", 700);
 
-    timeline.add("foreground-out", 700);
+    timeline.add("foreground-out", 800);
 
     timeline.add("sun-in", 0);
     timeline.add("sun-out", 300);
 
     timeline.add("moon-in", 400);
-    timeline.add("moon-up", 700);
+    timeline.add("moon-up", 800);
 
     // Tweens
     timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
