@@ -79,6 +79,7 @@ function initializeSprites2() {
     timeline.add("moon-up", 800);
 
     timeline.add("night-sky-in", 500);
+    timeline.add("day-sky-out", 600);
     timeline.add("night-sky-out", 800);
 
     timeline.add("stars-in", 600);
@@ -103,9 +104,10 @@ function initializeSprites2() {
     timeline.to("#moon", 300, { top: "30%", ease: Power3.easeNone }, 'moon-in');
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
-    timeline.to("#night-sky", 200, { css: { autoAlpha: 1 }, ease: Power3.easeNone }, 'night-sky-in');
+    timeline.to("#night-sky", 200, { css: { autoAlpha: 0.7 }, ease: Power3.easeNone }, 'night-sky-in');
+    timeline.to("#day-sky", 100, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'day-sky-out');
+
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
-    timeline.to("#day-sky", 0, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
 
     timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
 
