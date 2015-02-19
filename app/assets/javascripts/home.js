@@ -109,7 +109,7 @@ function initializeSprites2() {
     timeline.to("#day-sky", 100, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'day-sky-out');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
-    timeline.to("#stars", 200, { css: { 'background-position': "70px 70px" } }, 'night-sky-out');
+    timeline.to("#stars", 200, { css: { 'background-position': "50px 200px" } }, 'night-sky-out');
 
     timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
 
