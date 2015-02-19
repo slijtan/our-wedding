@@ -105,11 +105,11 @@ function initializeSprites2() {
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0.7 }, ease: Power3.easeNone }, 'night-sky-in');
+    timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
     timeline.to("#day-sky", 100, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'day-sky-out');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
-
-    timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
+    timeline.to("#stars", 200, { css: { 'background-position': "70px 70px" } }, 'night-sky-out');
 
     timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
 
