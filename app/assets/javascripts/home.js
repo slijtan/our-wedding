@@ -78,22 +78,38 @@ function initializeSprites2() {
     timeline.add("moon-in", 400);
     timeline.add("moon-up", 800);
 
+    timeline.add("night-sky-in", 500);
+    timeline.add("night-sky-out", 800);
+
+    timeline.add("stars-in", 600);
+
+    timeline.add("shadow-night", 400);
+
     // Tweens
     timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
 
-    timeline.to("#background", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
-    timeline.to("#background", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
-    timeline.to("#background", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
-    timeline.to("#background", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
-    timeline.to("#background", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
+    timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
+    timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
+    timeline.to("#sky", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
+    timeline.to("#sky", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
+    timeline.to("#sky", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
 
-    timeline.to("#foreground", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
+    timeline.to("#landscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
+    timeline.to("#cityscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
 
     timeline.to("#sun", 300, { top: "30%", ease: Power3.easeNone }, 'sun-in');
     timeline.to("#sun", 300, { top: "120%", ease: Power3.easeIn }, 'sun-out');
 
-    timeline.to("#moon", 300, { top: "40%", ease: Power3.easeNone }, 'moon-in');
+    timeline.to("#moon", 300, { top: "30%", ease: Power3.easeNone }, 'moon-in');
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
+
+    timeline.to("#night-sky", 200, { css: { autoAlpha: 1 }, ease: Power3.easeNone }, 'night-sky-in');
+    timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
+    timeline.to("#day-sky", 0, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
+
+    timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
+
+    timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
 
 
     $window.on("scroll", function() {
@@ -152,7 +168,7 @@ $(document).ready(function() {
     // });
 
     $('.page').each(function(){
-	resizeElement($(this), 1);
+	resizeElement($(this), 1.5);
     });
 
     initializeSprites2();
