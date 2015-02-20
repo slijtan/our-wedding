@@ -179,7 +179,6 @@
     .page {
 	z-index: 200;
 	position: relative;
-	margin-left: 15%;
 
 	.text {
 	    background-color: #FFFCEA;
@@ -196,10 +195,6 @@
 	#goodbye-title {
 	    position: absolute;
 	    top: 120px;
-	}
-
-	&#scene-2 {
-	    margin-left: 50%;
 	}
 
     }

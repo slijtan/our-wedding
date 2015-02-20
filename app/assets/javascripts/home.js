@@ -142,6 +142,30 @@ function at(height, inCallback) {
     });
 }
 
+function alignElement($ele, percentAlign) {
+    var alignment = $ele.hasClass('right') ? 'right' : 'left';
+    var elementWidth = $ele.outerWidth();
+    var windowWidth = $window.width();
+    var margin = windowWidth * percentAlign / 100;
+    var maxWidth = 1200;
+
+    if (windowWidth > maxWidth) {
+	if (alignment === 'left') {
+	    margin = (windowWidth - maxWidth) / 2;
+	} else {
+	    margin = windowWidth - ( (windowWidth - maxWidth) / 2) - elementWidth;
+	}
+
+    } else if ((windowWidth - elementWidth) / 2 < margin) {
+	margin = (windowWidth - elementWidth) / 2;
+
+    } else if (alignment == 'right') {
+	margin = windowWidth - elementWidth - margin;
+    }
+
+    $ele.css('margin-left', margin);
+}
+
 
 $(document).ready(function() {
     // resizeComponents();
@@ -170,8 +194,23 @@ $(document).ready(function() {
     // });
 
     $('.page').each(function(){
-	resizeElement($(this), 1.5);
+	resizeElement($(this), 1.3);
     });
+
+    $('.align').each(function(){
+	alignElement($(this), 15);
+    });
+
+    $( window ).resize(function() {
+	$('.page').each(function(){
+	    resizeElement($(this), 1.3);
+	});
+
+	$('.align').each(function(){
+	    alignElement($(this), 15);
+	});
+    });
+
 
     initializeSprites2();
     scrollToBottom();
