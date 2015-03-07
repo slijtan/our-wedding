@@ -19,16 +19,26 @@ function resizeComponents() {
     windowHeight = $window.height();
 }
 
-function resizeElement(ele, size) {
+function resizePage(ele, size) {
     documentHeight = $(document).height();
     windowHeight = $window.height();
 
-    var pageHeight =  size * windowHeight;
+    var newHeight =  size * windowHeight;
 
-    ele.height(pageHeight);
+    ele.height(newHeight);
+}
+
+function resizeImage(ele, size) {
 
     documentHeight = $(document).height();
     windowHeight = $window.height();
+
+    var newHeight =  size * windowHeight;
+    var elementHeight =  ele.outerHeight();
+
+    if (elementHeight > newHeight) {
+	ele.height(newHeight);
+    }
 }
 
 function scrollToBottom() {
@@ -178,7 +188,7 @@ $(document).ready(function() {
 
 
     // CONCEPT 2
-    // resizeElement($('#scene-1'), 5);
+    // resizePage($('#scene-1'), 5);
 
     // switchHeight = $('#scene-1').height() - $window.height();
 
@@ -194,21 +204,29 @@ $(document).ready(function() {
     // });
 
     $('.page').each(function(){
-	resizeElement($(this), 1.3);
+	resizePage($(this), 1.5);
     });
 
     $('.align').each(function(){
 	alignElement($(this), 15);
     });
 
+    // NOTE: Use media queries instead
+    // $('#welcome-title img').load(function() {
+    // 	resizeImage($(this), 0.6);
+    // });
+
     $( window ).resize(function() {
 	$('.page').each(function(){
-	    resizeElement($(this), 1.3);
+	    resizePage($(this), 1.5);
 	});
 
 	$('.align').each(function(){
 	    alignElement($(this), 15);
 	});
+
+	resizeImage($('#welcome-title img'), 0.6);
+
     });
 
 
