@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get 'home/index2' => 'home#index2'
+  post 'home/save_rsvp' => 'home#save_rsvp'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

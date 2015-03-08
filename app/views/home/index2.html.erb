@@ -33,19 +33,28 @@
   </div>
 
   <div class='page' id='scene-5'>
-    <div class='text align left'>
+    <div class='text align left' id='rsvp-form'>
       <h1>RSVP</h1>
 
-      <p>Please fill out this form to let us know if you will be able to make it!</p>
+      <p>Please fill out the following form by April 10, 2015. Thanks!</p>
 
-      <form>
-	<label>Full Name</label>
-	<label>Will you be joining us?</label>
-	<label>If so, who else will be joining us from your party?</label>
-      </form>
+      <%= form_for @rsvp, :remote => true, :url => { :action => "save_rsvp"} do |f| %>
+	<label>Full Name</label><%= f.text_field :full_name %><br /><br />
+	<label>Will you be joining us?</label><%= f.radio_button :is_coming, true %> Yes&nbsp;&nbsp;<%= f.radio_button :is_coming, false %> No<br /><br />
+	<label>If so, who else will be joining us from your party?</label><br />
+	<%= f.text_area :guest_list, :size => "60x4" %><br /><br />
+	<label>Anything else you want to let us know?</label><br />
+	<%= f.text_area :comment, :size => "60x4" %><br /><br />
+	<br />
+	<%= f.submit "Submit" %>
+      <% end %>
 
     </div>
 
+    <div class='text align left' id='rsvp-success' style="display:none;">
+      <h1>We've received your RSVP</h1>
+      <p>Thanks for being <span>AWESOME</span></p>
+    </div>
   </div>
 
   <div class='page' id='scene-4'>
@@ -57,7 +66,7 @@
       <ul>
 	<li><a href="#" class="lead">Grab a drink, play some board games, darts, or cornhole</a><span class="details"> at <a href="http://angelcitybrewery.com/" target=_blank>Angel City Brewery</a>. Bring your dogs & kids!</span></li>
 	<li><a href="#" class="lead">Challenge some mofos to Street Fighter 2</a><span class="details"> at <a href="http://eightytwo.la/" target=_blank>Eighty Two</a>, a newly opened Barcade (Bar + Arcade)</span></li>
-	<li><a href="#" class="lead">Grab a bomb brunch with an amazing view of downtown skyscrappers</a><span class="details"> at <a href="http://perchla.com/" target=_blank>Perch</a>. Or go at night and grab a drink at this 15th floor bar</span></li>
+	<li><a href="#" class="lead">Grab a bomb brunch with an amazing view of downtown skyscrappers</a><span class="details"> at <a href="http://perchla.com/" target=_blank>Perch</a>. Or go at night and grab a drink at this happening rooftop bar</span></li>
 	<li><a href="#" class="lead">Walk around Little Tokyo and</a><span class="details"> shop at the several boutiques. While you're there, grab a bite at <a href="http://www.yelp.com/biz/marugame-monzo-los-angeles-2" target=_blank>Marugame Monzo</a> for some hand made udon or get some sushi at <a href="http://www.yelp.com/biz/sushi-gen-los-angeles" target=_blank>Sushi Gen</a> (beware the line, try and avoid weekend peak times). <a href="http://www.moca.org/" target=_blank>The MOCA</a> regularly has interesting exhibits that you should check out</span></li>
 	<li><a href="#" class="lead">If you're around on Thursday, May 14th, check out</a><span class="details"> the <a href="http://www.downtownartwalk.org/" target=_blank>DTLA Artwalk</a> in the Historic Core. If not, you should still check out the many bars, restaurants, and art galleries in the Historic Core. <a href="http://lastbookstorela.com/" target=_blank>The Last Bookstore</a> is the coolest bookstore on the planet (no joke)</span></li>
 	<li><a href="#" class="lead">Staples Center & La Live</a><span class="details"> has a bunch of events going on. Check out their <a href="http://www.staplescenter.com/events" target=_blank>event schedule</a>, the NBA playoffs and NHL playoffs should be in full effect around then (lets hope for a Warriors/Clippers matchup). Theres a movie theater there as well if you wanna catch a flick</span></li>
