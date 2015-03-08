@@ -217,9 +217,9 @@ $(document).ready(function() {
 	resizePage($(this), 1);
     });
 
-    $('.align').each(function(){
-	alignElement($(this), 15);
-    });
+    // $('.align').each(function(){
+    // 	alignElement($(this), 15);
+    // });
 
     $('.hotel-expand').on('click', function(event) {
 	event.preventDefault();
@@ -246,11 +246,11 @@ $(document).ready(function() {
 	    resizePage($(this), 1);
 	});
 
-	$('.align').each(function(){
-	    alignElement($(this), 15);
-	});
+	// $('.align').each(function(){
+	//     alignElement($(this), 15);
+	// });
 
-	resizeImage($('#welcome-title img'), 0.6);
+	// resizeImage($('#welcome-title img'), 0.6);
 
     });
 
