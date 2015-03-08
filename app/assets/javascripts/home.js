@@ -188,38 +188,10 @@ function alignElement($ele, percentAlign) {
 
 
 $(document).ready(function() {
-    // resizeComponents();
-    // initializeSprites();
-    // scrollToBottom();
-
-    // $( window ).resize(function() {
-    // resizeComponents();
-    // });
-
-
-    // CONCEPT 2
-    // resizePage($('#scene-1'), 5);
-
-    // switchHeight = $('#scene-1').height() - $window.height();
-
-    // at(5000, function() {
-    // 	if($('#pinned').css('position') != 'absolute') {
-    // 		currentHeight = $window.scrollTop();
-    // 		pinnedHeight = $('#pinned').height();
-    // 		windowHeight = $(window).height();
-
-    // 		$('#pinned').css('position', 'absolute').css('top', currentHeight + windowHeight - pinnedHeight);
-    // 	}
-
-    // });
 
     $('.page').each(function(){
 	resizePage($(this), 1);
     });
-
-    // $('.align').each(function(){
-    // 	alignElement($(this), 15);
-    // });
 
     $('.hotel-expand').on('click', function(event) {
 	event.preventDefault();
@@ -236,22 +208,10 @@ $(document).ready(function() {
 	$(this).parent().find('.details').fadeToggle();
     });
 
-    // NOTE: Use media queries instead
-    // $('#welcome-title img').load(function() {
-    // 	resizeImage($(this), 0.6);
-    // });
-
     $( window ).resize(function() {
 	$('.page').each(function(){
 	    resizePage($(this), 1);
 	});
-
-	// $('.align').each(function(){
-	//     alignElement($(this), 15);
-	// });
-
-	// resizeImage($('#welcome-title img'), 0.6);
-
     });
 
 
