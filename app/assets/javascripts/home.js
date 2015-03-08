@@ -26,6 +26,9 @@ function resizePage(ele, size) {
     var newHeight =  size * windowHeight;
 
     ele.height(newHeight);
+
+    documentHeight = $(document).height();
+    windowHeight = $window.height();
 }
 
 function resizeImage(ele, size) {
@@ -96,7 +99,7 @@ function initializeSprites2() {
 
     timeline.add("shadow-night", 400);
 
-    timeline.add("transportation-in", 0);
+    timeline.add("transportation-in", 100);
     timeline.add("babys-in", 700);
 
     // Tweens
@@ -126,7 +129,7 @@ function initializeSprites2() {
 
     timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
 
-    timeline.to("#transportation", 300, { left: "100%", top: "17%", ease: Linear.easeNone }, 'transportation-in');
+    timeline.to("#transportation", 400, { left: "100%", top: "17%", ease: Linear.easeNone }, 'transportation-in');
     timeline.to("#babys", 400, { top: "-20%", ease: Linear.easeNone }, 'babys-in');
 
 
@@ -254,6 +257,5 @@ $(document).ready(function() {
 
     initializeSprites2();
     scrollToBottom();
-
 
 });
