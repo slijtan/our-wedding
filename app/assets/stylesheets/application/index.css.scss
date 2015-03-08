@@ -213,10 +213,16 @@
 	z-index: 100000;
     }
 
-    .hotel {
-	/* p { display: inline; } */
+    span.details {
+	display: none;
     }
 
+    a.lead::after {
+	content: "...";
+    }
 
+    a.lead.full::after {
+	content: "";
+    }
 
 }

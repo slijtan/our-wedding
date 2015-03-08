@@ -219,6 +219,13 @@ $(document).ready(function() {
 	$('#' + id + '-content').slideDown();
     });
 
+    $('.lead').on('click', function(event) {
+	event.preventDefault();
+
+	$(this).toggleClass('full');
+	$(this).parent().find('.details').fadeToggle();
+    });
+
     // NOTE: Use media queries instead
     // $('#welcome-title img').load(function() {
     // 	resizeImage($(this), 0.6);
