@@ -96,6 +96,9 @@ function initializeSprites2() {
 
     timeline.add("shadow-night", 400);
 
+    timeline.add("transportation-in", 0);
+    timeline.add("babys-in", 700);
+
     // Tweens
     timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
 
@@ -122,6 +125,10 @@ function initializeSprites2() {
     timeline.to("#stars", 200, { css: { 'background-position': "50px 200px" } }, 'night-sky-out');
 
     timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
+
+    timeline.to("#transportation", 300, { left: "100%", top: "17%", ease: Linear.easeNone }, 'transportation-in');
+    timeline.to("#babys", 400, { top: "-20%", ease: Linear.easeNone }, 'babys-in');
+
 
 
     $window.on("scroll", function() {
