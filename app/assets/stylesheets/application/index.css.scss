@@ -26,7 +26,10 @@
 // Custom imports
 //-----------------------------------------
 @import 'layout';
-@import 'media_queries';
+
+textarea {
+    max-width: 100%;
+}
 
 #content2 {
     position: relative;
@@ -161,8 +164,13 @@
 	    }
 
 	    &#accommodations {
-		width:750px;
+		width: 750px;
 		margin-left: -600px;
+	    }
+
+	    &#activities {
+		width: 650px;
+		margin-left: -100px;
 	    }
 
 	}
@@ -223,11 +231,4 @@
     }
 }
 
-// Ipad in portrait & landscape
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
-    .page {
-	.text {
-	    width: 450px;
-	}
-    }
-}
+@import 'media_queries';

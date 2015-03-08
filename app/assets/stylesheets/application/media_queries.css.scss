@@ -23,3 +23,193 @@
 @media print {
   @include h5bp-media-print;
 }
+
+
+// Ipad in portrait & landscape
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1250px)  {
+    #content2 {
+	.page {
+
+	    .text {
+		width: 450px;
+
+		&.align.right {
+		    margin-left: 0px;
+		}
+
+		&.align.left {
+		    margin-left: -490px;
+		}
+
+		&#accommodations {
+		    width: 550px;
+		    margin-left: -490px;
+		}
+
+		&#activities {
+		    width: 550px;
+		    margin-left: -100px;
+		}
+
+	    }
+
+	    #welcome-title {
+		margin-left: -400px;
+
+		img {
+		    width: 800px;
+		}
+	    }
+
+	    #goodbye-title {
+		margin-left: -400px;
+
+		img {
+		    width: 800px;
+		}
+	    }
+
+	}
+    }
+}
+
+@media only screen and (min-device-width : 650px) and (max-device-width : 1023px)  {
+    #content2 {
+	.page {
+
+	    .text {
+		width: 550px;
+
+		&.align.right {
+		    margin-left: -295px;
+		}
+
+		&.align.left {
+		    margin-left: -295px;
+		}
+
+		&#accommodations {
+		    width: 550px;
+		    margin-left: -295px;
+		}
+
+		&#activities {
+		    width: 550px;
+		    margin-left: -295px;
+		}
+	    }
+
+	    #welcome-title {
+		margin-left: -300px;
+
+		img {
+		    width: 600px;
+		}
+	    }
+
+	    #goodbye-title {
+		margin-left: -300px;
+
+		img {
+		    width: 600px;
+		}
+	    }
+
+	}
+    }
+}
+
+@media only screen and (min-device-width : 400px) and (max-device-width : 649px)  {
+    #content2 {
+	.page {
+
+	    .text {
+		width: 350px;
+
+		&.align.right {
+		    margin-left: -195px;
+		}
+
+		&.align.left {
+		    margin-left: -195px;
+		}
+
+		&#accommodations {
+		    width: 350px;
+		    margin-left: -195px;
+		}
+
+		&#activities {
+		    width: 350px;
+		    margin-left: -195px;
+		}
+	    }
+
+	    #welcome-title {
+		margin-left: -200px;
+
+		img {
+		    width: 400px;
+		}
+	    }
+
+	    #goodbye-title {
+		margin-left: -200px;
+
+		img {
+		    width: 400px;
+		}
+	    }
+
+	}
+    }
+}
+
+
+
+
+@media only screen and (min-device-width : 100px) and (max-device-width : 399px)  {
+    #content2 {
+	.page {
+
+	    .text {
+		width: 260px;
+
+		&.align.right {
+		    margin-left: -150px;
+		}
+
+		&.align.left {
+		    margin-left: -150px;
+		}
+
+		&#accommodations {
+		    width: 260px;
+		    margin-left: -150px;
+		}
+
+		&#activities {
+		    width: 260px;
+		    margin-left: -150px;
+		}
+	    }
+
+	    #welcome-title {
+		margin-left: -100px;
+
+		img {
+		    width: 250px;
+		}
+	    }
+
+	    #goodbye-title {
+		margin-left: -200px;
+
+		img {
+		    width: 400px;
+		}
+	    }
+
+	}
+    }
+}
