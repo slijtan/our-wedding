@@ -150,7 +150,7 @@ textarea {
 
 	.text {
 	    position: absolute;
-	    background-color: #FFFCEA;
+	    background-color: #575757;
 	    width: 550px;
 	    padding: 20px;
 	    left: 50%;
@@ -181,6 +181,28 @@ textarea {
 	    width: 993px;
 	    left: 50%;
 	    margin-left: -496px;
+	}
+
+	&#scene-2 {
+	    h2, h3, h4 {
+		text-align: center;
+	    }
+
+	    h2 {
+		padding-top: 20px;
+		margin: 1px 0 0 0;
+	    }
+
+	    h4 {
+		padding-bottom: 35px;
+	    }
+
+	}
+
+	&#scene-3 {
+	    .hotel {
+		padding-bottom: 10px;
+	    }
 	}
 
 	#goodbye-title {
@@ -219,16 +241,6 @@ textarea {
 	content: "";
     }
 
-    label {
-	padding-right: 10px;
-    }
-
-    input.error {
-	box-shadow: 0 0 5px rgba(240, 0, 94, 1);
-	padding: 3px 0px 3px 3px;
-	margin: 5px 1px 3px 0px;
-	border: 1px solid rgba(240, 0, 94, 1);
-    }
 }
 
 @import 'media_queries';

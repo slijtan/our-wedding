@@ -7,4 +7,97 @@
 //-----------------------------------------
 
 html {}
-body {}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    color: #fff;
+
+    a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+
+	&:hover {
+	    text-decoration: underline;
+	}
+    }
+
+    h1 {
+	font-family: 'Norican', cursive;
+	font-family: 'Pacifico', cursive;
+	font-family: 'Cookie', cursive;
+	font-family: 'Rochester', cursive;
+	font-family: 'Satisfy', cursive;
+	font-family: 'Sacramento', cursive;
+	font-family: 'Euphoria Script', cursive;
+	font-family: 'Dancing Script', cursive;
+
+	font-size: 65px;
+	margin: 2px 0 7px 0;
+	padding: 0;
+
+    }
+
+    h2 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 46px;
+	font-weight: 900;
+	margin: 10px 0;
+	padding: 0;
+	color: #969696;
+	line-height: 33px;
+
+	a {
+	    text-decoration: none;
+	    padding: 0 17px;
+	    margin-left: -17px;
+
+	    &:hover {
+		padding: 0;
+		text-decoration: none;
+
+		&::after {
+		    content: "«";
+		}
+
+		&::before {
+		    content: "»";
+		}
+	    }
+
+	}
+
+    }
+
+    h3 {
+	font-family: 'Amatic SC', cursive;
+	font-size: 37px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+	color: #DADADA;
+    }
+
+    h4 {
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	margin: 3px 0;
+	padding: 0;
+    }
+
+    label {
+	padding-right: 10px;
+    }
+
+    input.error {
+	box-shadow: 0 0 5px rgba(240, 0, 94, 1);
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 1px solid rgba(240, 0, 94, 1);
+    }
+
+}
