@@ -204,11 +204,19 @@ $(document).ready(function() {
     // });
 
     $('.page').each(function(){
-	resizePage($(this), 1.5);
+	resizePage($(this), 1);
     });
 
     $('.align').each(function(){
 	alignElement($(this), 15);
+    });
+
+    $('.hotel-expand').on('click', function(event) {
+	event.preventDefault();
+
+	var id = $(this).attr('id');
+	$('.hotel').slideUp();
+	$('#' + id + '-content').slideDown();
     });
 
     // NOTE: Use media queries instead
@@ -218,7 +226,7 @@ $(document).ready(function() {
 
     $( window ).resize(function() {
 	$('.page').each(function(){
-	    resizePage($(this), 1.5);
+	    resizePage($(this), 1);
 	});
 
 	$('.align').each(function(){
