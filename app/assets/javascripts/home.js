@@ -24,9 +24,16 @@ function resizePage(ele, size) {
     documentHeight = $(document).height();
     windowHeight = $window.height();
 
-    var newHeight =  size * windowHeight;
+    var newHeight = size * windowHeight;
 
-    ele.height(newHeight);
+    // $('.page').each(function() {
+    // 	var pageHeight = $(this).height();
+    // 	newHeight = Math.max(newHeight, pageHeight);
+    // });
+
+    if ( ele.height() < newHeight ) {
+	ele.height(newHeight);
+    }
 
     documentHeight = $(document).height();
     windowHeight = $window.height();
@@ -194,7 +201,7 @@ function alignElement($ele, percentAlign) {
 $(document).ready(function() {
 
     $('.page').each(function(){
-	resizePage($(this), 1);
+	resizePage($(this), 1.1);
     });
 
     $('.hotel-expand').on('click', function(event) {
@@ -214,7 +221,7 @@ $(document).ready(function() {
 
     $( window ).resize(function() {
 	$('.page').each(function(){
-	    resizePage($(this), 1);
+	    resizePage($(this), 1.1);
 	});
     });
 

@@ -32,7 +32,7 @@
 
 
 
-  <div class='page' id='scene-7'>
+  <div class='page' id='scene-6'>
     <h1 id='goodbye-title' class='align left'><%= image_tag("v1/title-2.png") %></h1>
   </div>
 
@@ -49,7 +49,6 @@
 	<%= f.text_area :guest_list, :size => "60x4" %><br /><br />
 	<label>Anything else you want to let us know?</label><br />
 	<%= f.text_area :comment, :size => "60x4" %><br /><br />
-	<br />
 	<%= f.submit "Submit" %>
       <% end %>
 
@@ -57,7 +56,7 @@
 
     <div class='text align left' id='rsvp-success' style="display:none;">
       <h1>We got your RSVP</h1>
-      <h2>Thanks <span class="cursive">for</span> being <i style="color:#FFF">awesome</i> <span class="cursive">and</span> <i style="color:#FFF">SUPER COOL</i></h2>
+      <h2>Thanks <span class="cursive">for</span> being <i style="color:#FFF">awesome</i> <span class="cursive">and</span> <i style="color:#FFF">super cool</i></h2>
       <h3>❤ Ck & Lij</h3>
     </div>
   </div>
@@ -165,7 +164,7 @@
       <h3>800 East Fourth Place, LA, CA 90013</h3>
       <h4>Ceremony @ 5:00PM | Reception @ 7:00PM</h4>
 
-      <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Millwick&key=AIzaSyDL2w6BVoIBNWYX6KoqH-HT43bxjFSshTQ&zoom=13"></iframe>
+      <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Millwick&key=AIzaSyDL2w6BVoIBNWYX6KoqH-HT43bxjFSshTQ&zoom=13"></iframe>
 
     </div>
 

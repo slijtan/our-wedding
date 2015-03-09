@@ -76,7 +76,7 @@ body {
 	font-weight: 900;
 	margin: 10px 0;
 	padding: 0;
-	color: #BBBBBB; //#969696;
+	color: #BBBBBB;
 	line-height: 33px;
 
 	a {
@@ -98,7 +98,6 @@ body {
 	    }
 
 	}
-
     }
 
     h3 {
@@ -120,6 +119,20 @@ body {
 
     label {
 	padding-right: 10px;
+    }
+
+    textarea {
+	max-width: 100%;
+    }
+
+    input[type=submit] {
+	cursor: pointer;
+	border: none;
+	color: white;
+	background: rgba(0,0,0,0);
+	font-family: 'Amatic SC', cursive;
+	font-size: 50px;
+
     }
 
     input.error {
