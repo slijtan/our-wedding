@@ -88,8 +88,8 @@ function initializeSprites2() {
     timeline.add("bg-yellow", 0);
     timeline.add("bg-light-blue", 100);
     timeline.add("bg-blue", 400);
-    timeline.add("bg-dark-blue", 600);
-    timeline.add("bg-black", 700);
+    timeline.add("bg-dark-blue", 450);
+    timeline.add("bg-black", 650);
 
     timeline.add("foreground-out", 800);
 
@@ -99,11 +99,12 @@ function initializeSprites2() {
     timeline.add("moon-in", 400);
     timeline.add("moon-up", 800);
 
-    timeline.add("night-sky-in", 500);
-    timeline.add("day-sky-out", 600);
+    timeline.add("night-sky-in", 600);
+    timeline.add("day-sky-out", 675);
+
     timeline.add("night-sky-out", 800);
 
-    timeline.add("stars-in", 600);
+    timeline.add("stars-in", 750);
 
     timeline.add("shadow-night", 400);
 
@@ -119,7 +120,7 @@ function initializeSprites2() {
     timeline.to("#sky", 100, { backgroundColor: 'rgb(77,227,255)', ease: Linear.easeNone }, 'bg-light-blue');
 
     timeline.to("#sky", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
-    timeline.to("#sky", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
+    // timeline.to("#sky", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
 
     timeline.to("#sky", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
 
@@ -133,8 +134,8 @@ function initializeSprites2() {
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0.7 }, ease: Power3.easeNone }, 'night-sky-in');
-    timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
     timeline.to("#day-sky", 100, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'day-sky-out');
+    timeline.to("#stars", 300, { css: { autoAlpha: 1 } }, 'stars-in');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
     timeline.to("#stars", 200, { css: { 'background-position': "50px 200px" } }, 'night-sky-out');
