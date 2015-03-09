@@ -71,7 +71,7 @@
 	    width: 100%;
 	    height: 100%;
 	    bottom: 0;
-	    background-color: rgb(230,127,205);
+	    background-color: rgb(219,207,32); //rgb(230,127,205);
 	}
 
 	#day-sky {
@@ -79,7 +79,7 @@
 	    width: 100%;
 	    height: 100%;
 	    opacity: 0.75;
-	    background: url("v1/sky.png") no-repeat 0 0 ;
+	    background: url("v1/sky.jpg") no-repeat 0 0 ;
 	    background-size: 100% 100%;
 	}
 
@@ -88,7 +88,7 @@
 	    width: 100%;
 	    height: 100%;
 	    visibility: hidden;
-	    background: url("v1/night-sky.png") no-repeat 0 0 ;
+	    background: url("v1/night-sky.jpg") no-repeat 0 0 ;
 	    background-size: 100% 100%;
 	}
 
@@ -174,7 +174,7 @@
 	&#scene-1 {
 	    #welcome-title {
 		position: absolute;
-		bottom: 350px;
+		bottom: 400px;
 		left: 50%;
 		margin-left: -496px;
 	    }
@@ -218,14 +218,15 @@
 	    }
 	}
 
-	#goodbye-title {
-	    position: absolute;
-	    top: 120px;
-	    width: 780px;
-	    left: 50%;
-	    margin-left: -450px;
+	&#scene-6 {
+	    #goodbye-title {
+		position: absolute;
+		top: 120px;
+		width: 550px;
+		left: 50%;
+		margin-left: -300px;
+	    }
 	}
-
     }
 
     #scroll-percent {

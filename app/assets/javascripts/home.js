@@ -113,10 +113,14 @@ function initializeSprites2() {
     // Tweens
     timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
 
-    timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
-    timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
+    // timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
+    // timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
+
+    timeline.to("#sky", 100, { backgroundColor: 'rgb(77,227,255)', ease: Linear.easeNone }, 'bg-light-blue');
+
     timeline.to("#sky", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
     timeline.to("#sky", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
+
     timeline.to("#sky", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
 
     timeline.to("#landscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
