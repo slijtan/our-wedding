@@ -4,6 +4,8 @@ class HomeController < ApplicationController
   end
 
   def index2
+    @debug = params.fetch(:debug, false)
+
     @rsvp = Rsvp.new
   end
 

@@ -252,6 +252,10 @@ textarea {
 	content: "";
     }
 
+    .debug-output {
+	display: none;
+    }
+
 }
 
 @import 'media_queries';

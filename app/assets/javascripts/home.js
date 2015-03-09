@@ -1,6 +1,7 @@
 var $window = $(window);
 var documentHeight;
 var windowHeight;
+var debugOutput;
 
 function resizeComponents() {
     documentHeight = $(document).height();
@@ -146,7 +147,10 @@ function initializeSprites2() {
 	// console.log("Scroll Top: " + scrollTop);
 	// console.log("Bird position: " + $("#bird").css('top'));
 
-	$('#scroll-percent').text(scrollPercent * 1000);
+	if (debugOutput) {
+	    $('#scroll-percent').text(scrollPercent * 1000);
+	}
+
 	timeline.progress(scrollPercent).pause();
     });
 }
@@ -217,5 +221,11 @@ $(document).ready(function() {
 
     initializeSprites2();
     scrollToBottom();
+
+    debugOutput = $('body').data('debug');
+
+    if (debugOutput) {
+	$('.debug-output').show();
+    }
 
 });
