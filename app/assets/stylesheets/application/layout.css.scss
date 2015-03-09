@@ -15,6 +15,18 @@ body {
     font-weight: 300;
     color: #fff;
 
+    span.cursive {
+    	font-family: 'Sacramento', cursive;
+    }
+
+    b {
+	font-weight: 900;
+    }
+
+    u {
+	text-decoration: dashed;
+    }
+
     a {
 	text-decoration: none;
 	color: inherit;
@@ -22,6 +34,23 @@ body {
 
 	&:hover {
 	    text-decoration: underline;
+	}
+    }
+
+    ul {
+	list-style-type: none;
+	padding: 0 0 0 13px;
+	margin: 3px 0 0 0;
+
+	li {
+	    padding: 0;
+
+	    &::before {
+		content: "►";
+		font-size: 8px;
+		color: #969696;
+		padding-right: 7px;
+	    }
 	}
     }
 
@@ -47,7 +76,7 @@ body {
 	font-weight: 900;
 	margin: 10px 0;
 	padding: 0;
-	color: #969696;
+	color: #BBBBBB; //#969696;
 	line-height: 33px;
 
 	a {
@@ -78,7 +107,7 @@ body {
 	font-weight: 400;
 	margin: 0;
 	padding: 0;
-	color: #DADADA;
+	color: #FFF;
     }
 
     h4 {
