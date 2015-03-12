@@ -127,10 +127,10 @@ function initializeSprites2() {
     timeline.to("#landscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
     timeline.to("#cityscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
 
-    timeline.to("#sun", 300, { top: "30%", ease: Power3.easeNone }, 'sun-in');
+    timeline.to("#sun", 300, { top: "15%", ease: Power3.easeNone }, 'sun-in');
     timeline.to("#sun", 300, { top: "120%", ease: Power3.easeIn }, 'sun-out');
 
-    timeline.to("#moon", 300, { top: "30%", ease: Power3.easeNone }, 'moon-in');
+    timeline.to("#moon", 300, { top: "25%", ease: Power3.easeNone }, 'moon-in');
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
 
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0.7 }, ease: Power3.easeNone }, 'night-sky-in');
