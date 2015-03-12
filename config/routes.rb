@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'home#index'
+  root 'home#index2'
 
   get 'home/index2' => 'home#index2'
   post 'home/save_rsvp' => 'home#save_rsvp'
