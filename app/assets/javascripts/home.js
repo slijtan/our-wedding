@@ -112,7 +112,9 @@ function initializeSprites2() {
     timeline.add("babys-in", 700);
 
     // Tweens
-    timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
+    if (debugOutput) {
+	timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
+    }
 
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
@@ -204,6 +206,7 @@ function alignElement($ele, percentAlign) {
 
 
 $(document).ready(function() {
+    debugOutput = $('body').data('debug');
 
     $('.page').each(function(){
 	resizePage($(this), 1.1);
@@ -230,11 +233,8 @@ $(document).ready(function() {
 	});
     });
 
-
     initializeSprites2();
     scrollToBottom();
-
-    debugOutput = $('body').data('debug');
 
     if (debugOutput) {
 	$('.debug-output').show();

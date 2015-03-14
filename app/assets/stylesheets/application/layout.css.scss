@@ -127,10 +127,20 @@ body {
     }
 
     input.error {
-	box-shadow: 0 0 5px rgba(240, 0, 94, 1);
+	box-shadow: 0 0 5px #F0E400;
 	padding: 3px 0px 3px 3px;
 	margin: 5px 1px 3px 0px;
-	border: 1px solid rgba(240, 0, 94, 1);
+	border: 1px solid #F0E400;
+    }
+
+
+    label.error {
+	color: #F0E400;
+
+	&::before {
+	    content: "*";
+	    margin-right: 5px;
+	}
     }
 
 }
