@@ -20,19 +20,20 @@ function resizeComponents() {
     windowHeight = $window.height();
 }
 
-function resizePage(ele, size) {
+function resizePage($ele, size) {
     documentHeight = $(document).height();
     windowHeight = $window.height();
 
     var newHeight = size * windowHeight;
+    var $pageDiv = $ele.find(">:first-child");
+    var heightOfLargestContainedElement = $pageDiv.outerHeight() + $pageDiv.position()['top'];
 
-    // $('.page').each(function() {
-    // 	var pageHeight = $(this).height();
-    // 	newHeight = Math.max(newHeight, pageHeight);
-    // });
+    if ( $ele.height() < newHeight ) {
+	$ele.height(newHeight);
+    }
 
-    if ( ele.height() < newHeight ) {
-	ele.height(newHeight);
+    if ($ele.height() < heightOfLargestContainedElement) {
+	$ele.height(heightOfLargestContainedElement);
     }
 
     documentHeight = $(document).height();

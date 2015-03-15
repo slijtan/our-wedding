@@ -252,7 +252,7 @@
 	    &#scene-1 {
 		#welcome-title {
 		    margin-left: -100px;
-		    bottom: 150px;
+		    bottom: 250px;
 
 		    img {
 			width: 250px;
@@ -284,10 +284,10 @@
 
 	    &#scene-6 {
 		#goodbye-title {
-		    margin-left: -175px;
+		    margin-left: -150px;
 
 		    img {
-			width: 325px;
+			width: 300px;
 		    }
 		}
 	    }
@@ -305,8 +305,10 @@
 	.page {
 
 	    &#scene-1 {
+
 		#welcome-title {
 		    margin-left: -300px;
+		    bottom: 250px;
 
 		    img {
 			width: 600px;
