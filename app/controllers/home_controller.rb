@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
 
+  caches_page :index2
+
   def index
   end
 

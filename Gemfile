@@ -59,3 +59,5 @@ group :development, :test do
 end
 
 gem 'compass-h5bp', group: :assets
+
+gem 'actionpack-page_caching'
