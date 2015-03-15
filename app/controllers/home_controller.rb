@@ -22,8 +22,8 @@ class HomeController < ApplicationController
       highlight_errors_js << "$('#new_rsvp label').removeClass('error');"
 
       @rsvp.errors.each do |error|
-        highlight_errors_js << "$('input[name=\"rsvp[" << error.to_s << "]\"').addClass('error');"
-        highlight_errors_js << "$('input[name=\"rsvp[" << error.to_s << "]\"').prev().addClass('error');"
+        highlight_errors_js << "$('input[name=\"rsvp[" << error.to_s << "]\"]').addClass('error');"
+        highlight_errors_js << "$('input[name=\"rsvp[" << error.to_s << "]\"]').prev().addClass('error');"
       end
 
       render :js => highlight_errors_js
