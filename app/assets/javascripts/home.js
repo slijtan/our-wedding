@@ -116,6 +116,8 @@ function initializeSprites2() {
 	timeline.to("#animation-percent", 1000, { bottom: '100%', ease: Linear.easeNone }, 'start');
     }
 
+    timeline.to("#scroll-up", 50, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'start');
+
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
 
