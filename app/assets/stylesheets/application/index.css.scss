@@ -230,9 +230,12 @@
 	    #goodbye-title {
 		position: absolute;
 		top: 120px;
-		width: 550px;
 		left: 50%;
 		margin-left: -300px;
+
+		img {
+		    width: 550px;
+		}
 	    }
 	}
     }
