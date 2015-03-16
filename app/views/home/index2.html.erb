@@ -17,16 +17,20 @@
 
     <div id='stars'></div>
 
-    <div id='landscape'><%= image_tag("v1/foreground.png") %></div>
-    <div id='shadow'></div>
-    <div id='cityscape'><%= image_tag("v1/cityscape.png") %></div>
+    <div id='landscape'>
+      <div id="landscape-crop">
+	<%= image_tag("v2/landscape.png" ) %>
+      </div>
+    </div>
+    <!-- <div id='shadow'></div> -->
+    <!-- <div id='cityscape'><%= image_tag("v1/cityscape.png") %></div> -->
 
     <div id='sun'><%= image_tag("v1/sun.png") %></div>
     <div id='moon'><%= image_tag("v1/moon.png") %></div>
 
-    <div id='registry'><%= image_tag("v1/moon.png") %></div>
-    <div id='transportation'><%= image_tag("http://mewarnai.us/images/209107-airplane-banner-clip-art.jpg", :width => 200) %></div>
-    <div id='babys'><%= image_tag("http://images.clipartof.com/small/214105-Royalty-Free-RF-Clipart-Illustration-Of-A-Childs-Sketch-Of-A-Boy-Holding-Balloons.jpg", :width => 100) %></div>
+    <!--  <div id='registry'><%= image_tag("v1/moon.png") %></div> -->
+    <div id='transportation'><%= image_tag("v2/plane.png") %></div>
+    <!--  <div id='babys'><%= image_tag("http://images.clipartof.com/small/214105-Royalty-Free-RF-Clipart-Illustration-Of-A-Childs-Sketch-Of-A-Boy-Holding-Balloons.jpg", :width => 100) %></div>  -->
 
     <div id='scroll-up'><h3>Scroll Up &uarr;</h3></div>
 
@@ -170,7 +174,13 @@
 
       <iframe id="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=The%20Millwick&key=AIzaSyDL2w6BVoIBNWYX6KoqH-HT43bxjFSshTQ&zoom=13"></iframe>
 
-      <p><small class="sub-chart"">We recommend taking <a href="https://www.uber.com/invite/uberckandlij" target=_blank>Uber</a> or Lyft to the venue. Valet will be available for those driving.</small></p>
+      <p class="sub-chart">
+	Valet will be available for those driving to the venue.<br />
+	We recommend taking <a href="https://www.uber.com/invite/uberckandlij" target=_blank>Uber</a> or <a href="https://lyft.com/i/LIJEN1" target=_blank>Lyft</a> to the venue ($6 from within downtown).<br />
+	First time users ride free with the following referral codes!<br />
+	Uber: <a href="https://www.uber.com/invite/uberckandlij" target=_blank>uberckandlij</a> | Lyft: <a href="https://lyft.com/i/LIJEN1" target=_blank>LIJEN1</a>
+
+      </p>
 
     </div>
 

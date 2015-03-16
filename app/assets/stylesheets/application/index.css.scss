@@ -42,7 +42,36 @@
 	    width: 100%;
 	    bottom: 0;
 	    z-index: 100;
-	    background: url("/images/v1/foreground-right.png") repeat;
+	    background: url("/images/v2/grassrepeat.png") repeat-x center bottom;
+
+	    #landscape-crop {
+		width: 1360px;
+		height: 476px;
+		overflow: hidden;
+		margin: 0 auto;
+
+		img {
+		    margin: 0;
+		    padding: 0;
+		}
+
+		&.step-2 img {
+		    margin-left: -1360px;
+		}
+
+		&.step-3 img {
+		    margin-left: -2720px;
+		}
+
+		&.step-4 img {
+		    margin-left: -4080px;
+		}
+
+		&.step-5 img {
+		    margin-left: -5440px;
+		}
+
+	    }
 	}
 
 	#shadow {
@@ -59,19 +88,19 @@
 	    }
 	}
 
-	#cityscape {
-	    position: fixed;
-	    width: 100%;
-	    bottom: 150px;
-	    z-index: 99;
-	}
+	/* #cityscape { */
+	/*     position: fixed; */
+	/*     width: 100%; */
+	/*     bottom: 150px; */
+	/*     z-index: 99; */
+	/* } */
 
 	#sky {
 	    position: fixed;
 	    width: 100%;
 	    height: 100%;
 	    bottom: 0;
-	    background-color: rgb(219,207,32); //rgb(230,127,205);
+	    background-color: rgb(77,227,255); //rgb(219,207,32); //rgb(230,127,205);
 	}
 
 	#day-sky {
@@ -104,7 +133,7 @@
 
 	#sun {
 	    left: 25%;
-	    top: 95%;
+	    top: 25%;
 	    z-index: 50;
 	    position: fixed;
 	}
@@ -118,18 +147,18 @@
 
 
 	#transportation {
-	    left: -200px;
-	    top: 30%;
+	    left: -708px;
+	    top: 60%;
 	    z-index: 50;
 	    position: fixed;
 	}
 
-	#babys {
-	    left: 35%;
-	    top: 120%;
-	    z-index: 50;
-	    position: fixed;
-	}
+	/* #babys { */
+	/*     left: 35%; */
+	/*     top: 120%; */
+	/*     z-index: 50; */
+	/*     position: fixed; */
+	/* } */
 
 	#registry {
 	    right: 25%;

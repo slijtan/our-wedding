@@ -84,6 +84,8 @@ function initializeSprites() {
 
 function initializeSprites2() {
     var timeline = new TimelineMax({ paused: true });
+    var outro = 1050; // 850
+
     timeline.add("start", 0);
 
     timeline.add("bg-yellow", 0);
@@ -92,25 +94,29 @@ function initializeSprites2() {
     timeline.add("bg-dark-blue", 450);
     timeline.add("bg-black", 650);
 
-    timeline.add("foreground-out", 800);
+    timeline.add("foreground-out", outro);
 
     timeline.add("sun-in", 0);
-    timeline.add("sun-out", 300);
+    timeline.add("sun-out", 150);
 
-    timeline.add("moon-in", 400);
-    timeline.add("moon-up", 800);
+    timeline.add("moon-in", 470);
+    timeline.add("moon-up", outro);
 
     timeline.add("night-sky-in", 600);
     timeline.add("day-sky-out", 675);
 
-    timeline.add("night-sky-out", 800);
+    // timeline.add("night-sky-out", 800);
+    timeline.add("night-sky-out", outro);
 
-    timeline.add("stars-in", 750);
+    timeline.add("stars-in", outro - 150);
 
-    timeline.add("shadow-night", 400);
+    timeline.add("transportation-in", 830);
+    // timeline.add("babys-in", 700);
 
-    timeline.add("transportation-in", 100);
-    timeline.add("babys-in", 700);
+    timeline.add("landscape-2", 390);
+    timeline.add("landscape-3", 510);
+    timeline.add("landscape-4", 760);
+    timeline.add("landscape-5", 810);
 
     // Tweens
     if (debugOutput) {
@@ -122,18 +128,18 @@ function initializeSprites2() {
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(219,207,32)', ease: Linear.easeNone }, 'bg-yellow');
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(0,215,255)', ease: Linear.easeNone }, 'bg-light-blue');
 
-    timeline.to("#sky", 100, { backgroundColor: 'rgb(77,227,255)', ease: Linear.easeNone }, 'bg-light-blue');
+    // timeline.to("#sky", 100, { backgroundColor: 'rgb(77,227,255)', ease: Linear.easeNone }, 'bg-light-blue');
 
     timeline.to("#sky", 100, { backgroundColor: 'rgb(2,50,221)', ease: Linear.easeNone }, 'bg-blue');
     // timeline.to("#sky", 100, { backgroundColor: 'rgb(49,47,102)', ease: Linear.easeNone }, 'bg-dark-blue');
 
     timeline.to("#sky", 300, { backgroundColor: 'rgb(0,0,0)', ease: Linear.easeNone }, 'bg-black');
 
-    timeline.to("#landscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
-    timeline.to("#cityscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
+    timeline.to("#landscape", 200, { bottom: -476, ease: Linear.easeNone }, 'foreground-out');
+    // timeline.to("#cityscape", 200, { bottom: -400, ease: Linear.easeNone }, 'foreground-out');
 
-    timeline.to("#sun", 300, { top: "15%", ease: Power3.easeNone }, 'sun-in');
-    timeline.to("#sun", 300, { top: "120%", ease: Power3.easeIn }, 'sun-out');
+    // timeline.to("#sun", 300, { top: "25%", ease: Power3.easeNone }, 'sun-in');
+    timeline.to("#sun", 350, { top: "120%", ease: Power3.easeIn }, 'sun-out');
 
     timeline.to("#moon", 300, { top: "25%", ease: Power3.easeNone }, 'moon-in');
     timeline.to("#moon", 300, { top: "10%", ease: Power3.easeNone }, 'moon-up');
@@ -145,10 +151,13 @@ function initializeSprites2() {
     timeline.to("#night-sky", 200, { css: { autoAlpha: 0 }, ease: Power3.easeNone }, 'night-sky-out');
     timeline.to("#stars", 200, { css: { 'background-position': "50px 200px" } }, 'night-sky-out');
 
-    timeline.to("#shadow", 0, { css: { className: '+=night' } }, 'shadow-night');
+    timeline.to("#landscape-crop", 0, { css: { className: '+=step-2' } }, 'landscape-2');
+    timeline.to("#landscape-crop", 0, { css: { className: '+=step-3' } }, 'landscape-3');
+    timeline.to("#landscape-crop", 0, { css: { className: '+=step-4' } }, 'landscape-4');
+    timeline.to("#landscape-crop", 0, { css: { className: '+=step-5' } }, 'landscape-5');
 
-    timeline.to("#transportation", 400, { left: "100%", top: "17%", ease: Linear.easeNone }, 'transportation-in');
-    timeline.to("#babys", 400, { top: "-20%", ease: Linear.easeNone }, 'babys-in');
+    timeline.to("#transportation", 400, { left: "100%", top: "25%", ease: Linear.easeNone }, 'transportation-in');
+    // timeline.to("#babys", 400, { top: "-20%", ease: Linear.easeNone }, 'babys-in');
 
 
 
@@ -212,7 +221,7 @@ $(document).ready(function() {
     debugOutput = $('body').data('debug');
 
     $('.page').each(function(){
-	resizePage($(this), 1.1);
+	resizePage($(this), 1.3);
     });
 
     $('.hotel-expand').on('click', function(event) {
@@ -232,7 +241,7 @@ $(document).ready(function() {
 
     $( window ).resize(function() {
 	$('.page').each(function(){
-	    resizePage($(this), 1.1);
+	    resizePage($(this), 1.3);
 	});
     });
 
